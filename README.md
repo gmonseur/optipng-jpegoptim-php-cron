@@ -14,7 +14,7 @@ set work path in task_optipng_jpegoptim.php for example:
     
 
 ## Add to cron daily (ubuntu)
-  chmod +x task_optipng_jpegoptim.php && ln -s $_ /etc/cron.daily/. 
+    chmod +x task_optipng_jpegoptim.php && ln -s $_ /etc/cron.daily/. 
 
 
 
