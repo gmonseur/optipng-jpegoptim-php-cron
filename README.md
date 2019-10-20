@@ -3,15 +3,19 @@
 Recursively optimize jpg and png images 
 
 
-## Install image utils ubuntu
-sudo apt install jpegoptim
-sudo apt install optipng
+## Install image utils (ubuntu)
 
+    sudo apt install jpegoptim
+    sudo apt install optipng
 
-## Usage
 set work path in task_optipng_jpegoptim.php for example:
 
     $path = '/var/www';
+    
+
+## Add to cron daily (ubuntu)
+  chmod +x task_optipng_jpegoptim.php && ln -s $_ /etc/cron.daily/. 
+
 
 
 ## Links
