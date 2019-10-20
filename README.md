@@ -15,5 +15,7 @@ set work path in task_optipng_jpegoptim.php for example:
 
 
 ## Links
+
 [jpegoptim](https://github.com/tjko/jpegoptim)
+
 [optipng](http://optipng.sourceforge.net/)
