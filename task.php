@@ -17,13 +17,13 @@ $Regex_png = new RegexIterator($Iterator, '/^.+(.png)$/i', RecursiveRegexIterato
 
 foreach($Regex_jpg as $name => $Regex){
 	if ($debug['enable']) $debug['total_imgs']++;
-    $output = shell_exec ( 'jpegoptim -n -m80 -t -p \''.$name.'\'');
+    $output = shell_exec ( 'jpegoptim --strip-all -n -m80 -t -p \''.$name.'\'');
     $compression_persentage = explode('Average compression (1 files):', $output);
     if (isset($compression_persentage[1])) {
 	    $compression_persentage = explode('%', $compression_persentage[1])[0];
 	    echo "$name: $compression_persentage\n";
 	    if ($compression_persentage > 20) {
-		    shell_exec ( 'jpegoptim -m80 -t -p \''.$name.'\'');
+		    shell_exec ( 'jpegoptim --strip-all -m80 -t -p \''.$name.'\'');
 	    	echo "debug['optimized']: $debug['optimized'], compression_persentage: $compression_persentage\n\n";
 			if ($debug['enable']) $debug['optimized']++;
 	    }
