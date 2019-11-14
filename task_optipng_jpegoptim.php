@@ -2,8 +2,8 @@
 
 <?php
 $path = '.';
-$debug[
-	'enable' = true,
+$debug = [
+	'enable' => true,
 	'total_imgs' => 0,
 	'optimized' => 0
 ];
@@ -21,7 +21,7 @@ foreach($Regex_jpg as $name => $Regex){
 	    if ($compression_persentage > 20) {
 		    shell_exec ( 'jpegoptim --strip-all -m80 -t -p \''.$name.'\'');
 			$debug['optimized']++;
-	    	if ($debug['enable']) echo "debug['optimized']: $debug['optimized'], compression_persentage: $compression_persentage\n\n";
+	    	if ($debug['enable']) echo "debug['optimized']: ".$debug['optimized'].", compression_persentage: ".$compression_persentage."\n\n";
 	    }
     }
 }
