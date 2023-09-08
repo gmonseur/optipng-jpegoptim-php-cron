@@ -13,8 +13,10 @@ set work path in task_optipng_jpegoptim.php for example:
     $path = '/var/www';
     
 
-## Add to cron daily (ubuntu)
-    chmod +x task_optipng_jpegoptim.php && ln -s $_ /etc/cron.daily/. 
+## Add to cron example
+    # At 01:00 on Sunday.
+    0 1 * * 0 cd /path/to/script/ && /usr/bin/php task_optipng_jpegoptim.php 2<&1 | /usr/bin/mail -s "Cron Opti images" email@email.be
+
 
 
 
